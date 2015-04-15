@@ -1,0 +1,83 @@
+
+**** Build of configuration Debug for project Practica 4 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../Practica1_PIH.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/bin/cl430" -vmspx --abi=coffabi --data_model=restricted --include_path="C:/ti/ccsv6/ccs_base/msp430/include" --include_path="C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include" --advice:power=all -g --define=__MSP430F5438A__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="Practica1_PIH.pp"  "../Practica1_PIH.c"
+"../Practica1_PIH.c", line 78: remark #1535-D: (ULP 8.1) variable "DCORSEL" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../Practica1_PIH.c", line 79: remark #1535-D: (ULP 8.1) variable "FLLN" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../Practica1_PIH.c", line 141: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../Practica1_PIH.c", line 169: remark #1528-D: (ULP 3.1) Detected flag polling using UCBUSY. Recommend using an interrupt combined with enter LPMx and ISR
+"../Practica1_PIH.c", line 154: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../Practica1_PIH.c", line 156: remark #2553-D: (ULP 14.1) Array index (involving "bCount") of type "int". Recommend using "unsigned int"
+"../Practica1_PIH.c", line 160: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../Practica1_PIH.c", line 165: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../Practica1_PIH.c", line 198: remark #1532-D: (ULP 5.3) Detected sprintf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../Practica1_PIH.c", line 254: remark #1532-D: (ULP 5.3) Detected sprintf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../Practica1_PIH.c", line 254: remark #1538-D: (ULP 10.1) ISR Port2_ISR calls function sprintf. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../Practica1_PIH.c", line 255: remark #1538-D: (ULP 10.1) ISR Port2_ISR calls function halLcdPrintLine. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../Practica1_PIH.c", line 18: remark #1535-D: (ULP 8.1) variable "contraste" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../Practica1_PIH.c", line 19: remark #1535-D: (ULP 8.1) variable "iluminacion" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../Practica1_PIH.c", line 20: remark #1535-D: (ULP 8.1) variable "textstyle" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../Practica1_PIH.c", line 21: remark #1535-D: (ULP 8.1) variable "saludo" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../Practica1_PIH.c", line 23: remark #1535-D: (ULP 8.1) variable "borrar" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../Practica1_PIH.c'
+' '
+'Building file: ../hal_lcd.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/bin/cl430" -vmspx --abi=coffabi --data_model=restricted --include_path="C:/ti/ccsv6/ccs_base/msp430/include" --include_path="C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include" --advice:power=all -g --define=__MSP430F5438A__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="hal_lcd.pp"  "../hal_lcd.c"
+"../hal_lcd.c", line 57: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../hal_lcd.c", line 60: remark #1528-D: (ULP 3.1) Detected flag polling using UCBUSY. Recommend using an interrupt combined with enter LPMx and ISR
+"../hal_lcd.c", line 55: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../hal_lcd.c", line 64: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "PEOUT_L" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../hal_lcd.c", line 91: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../hal_lcd.c", line 190: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../hal_lcd.c", line 426: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../hal_lcd.c", line 427: remark #1528-D: (ULP 3.1) Detected flag polling using UCBUSY. Recommend using an interrupt combined with enter LPMx and ISR
+"../hal_lcd.c", line 439: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../hal_lcd.c", line 433: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../hal_lcd.c", line 440: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 473: remark #1545-D: (ULP 14.1) Array index of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 511: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../hal_lcd.c", line 539: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../hal_lcd.c", line 541: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../hal_lcd.c", line 542: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 566: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../hal_lcd.c", line 568: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../hal_lcd.c", line 633: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 635: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 637: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../hal_lcd.c", line 645: remark #2553-D: (ULP 14.1) Array index (involving "LCD_MEM_Add") of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 649: remark #1545-D: (ULP 14.1) Array index of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 651: remark #1545-D: (ULP 14.1) Array index of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 655: remark #1545-D: (ULP 14.1) Array index of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 657: remark #1545-D: (ULP 14.1) Array index of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 964: remark #2553-D: (ULP 14.1) Array index (involving "LcdTableAddressTemp") of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 966: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../hal_lcd.c", line 967: remark #1545-D: (ULP 14.1) Array index of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 968: remark #1545-D: (ULP 14.1) Array index of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 970: remark #2553-D: (ULP 14.1) Array index (involving "LcdTableAddressTemp") of type "int". Recommend using "unsigned int"
+"../hal_lcd.c", line 991: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../hal_lcd.c", line 1008: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../hal_lcd.c", line 12: remark #1535-D: (ULP 8.1) variable "LcdInitMacro" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../hal_lcd.c", line 33: remark #1535-D: (ULP 8.1) variable "Read_Block_Address_Macro" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../hal_lcd.c", line 34: remark #1535-D: (ULP 8.1) variable "Draw_Block_Value_Macro" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../hal_lcd.c", line 35: remark #1535-D: (ULP 8.1) variable "Draw_Block_Address_Macro" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../hal_lcd.c", line 38: remark #1535-D: (ULP 8.1) variable "contrast" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../hal_lcd.c'
+' '
+'Building target: Practica 4.out'
+'Invoking: MSP430 Linker'
+"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/bin/cl430" -vmspx --abi=coffabi --data_model=restricted --advice:power=all -g --define=__MSP430F5438A__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"Practica 4.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccsv6/ccs_base/msp430/include" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.3/include" -i"C:/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Practica 4_linkInfo.xml" --rom_model -o "Practica 4.out" "./Practica1_PIH.obj" "./hal_lcd.obj" "../lnk_msp430f5438a.cmd"  -l"libc.a" -l"libmath.a" 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+warning #10204-D: could not resolve index library "libmath.a" to a compatible library
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port E in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port F in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+'Finished building target: Practica 4.out'
+' '
+
+**** Build Finished ****

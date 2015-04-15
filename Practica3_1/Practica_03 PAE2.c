@@ -229,7 +229,7 @@ void main(void)
 				escribir(cadena,linea); 			// Escribimos cadena
 
 			}else{
-				if(tiempo==alarma and config_alarma==2){ //si la alarma esta configurada i coincideix amb el temps
+				if(tiempo==alarma && config_alarma==2){ //si la alarma esta configurada i coincideix amb el temps
 					sprintf(cadena, "ALARMA!: %d:%d:%d", (alarma/3600)%24,(alarma/60)%60,alarma%60); //la alarma ha sonat
 					escribir(cadena,linea); 			// Escribimos cadena
 				}else{ //s'esta configurant l'alarma o no coincideix amb el temps

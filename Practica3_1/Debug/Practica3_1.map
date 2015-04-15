@@ -1,10 +1,10 @@
 ******************************************************************************
                   MSP430 Linker PC v4.4.3                      
 ******************************************************************************
->> Linked Mon Mar 16 04:20:22 2015
+>> Linked Wed Apr 15 21:07:35 2015
 
 OUTPUT FILE NAME:   <Practica3_1.out>
-ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 00005f1e
+ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 00005e58
 
 
 MEMORY CONFIGURATION
@@ -19,7 +19,7 @@ MEMORY CONFIGURATION
   INFOB                 00001900   00000080  00000000  00000080  RWIX
   INFOA                 00001980   00000080  00000000  00000080  RWIX
   RAM                   00001c00   00004000  00001134  00002ecc  RWIX
-  FLASH                 00005c00   0000a380  00000d88  000095f8  RWIX
+  FLASH                 00005c00   0000a380  00000cd8  000096a8  RWIX
   INT00                 0000ff80   00000002  00000000  00000002  RWIX
   INT01                 0000ff82   00000002  00000000  00000002  RWIX
   INT02                 0000ff84   00000002  00000000  00000002  RWIX
@@ -84,7 +84,7 @@ MEMORY CONFIGURATION
   INT61                 0000fffa   00000002  00000002  00000000  RWIX
   INT62                 0000fffc   00000002  00000002  00000000  RWIX
   RESET                 0000fffe   00000002  00000002  00000000  RWIX
-  FLASH2                00010000   00035c00  00002a96  0003316a  RWIX
+  FLASH2                00010000   00035c00  00002b16  000330ea  RWIX
 
 
 SECTION ALLOCATION MAP
@@ -121,20 +121,20 @@ section   page    origin      length       input sections
                   00005dba    00000002     --HOLE-- [fill = 0]
 
 .text:_isr 
-*          0    00005dbc    0000018c     
-                  00005dbc    00000162     Practica_03 PAE2.obj (.text:_isr:Port2_ISR)
-                  00005f1e    0000001a     rts430x_lc_rd.lib : boot_special.obj (.text:_isr:_c_int00_noargs_noexit)
-                  00005f38    0000000a     Practica_03 PAE2.obj (.text:_isr:Timer1_ISR)
-                  00005f42    00000006     rts430x_lc_rd.lib : isr_trap.obj (.text:_isr:__TI_ISR_TRAP)
+*          0    00005dbc    000000c6     
+                  00005dbc    0000009c     Practica_03 PAE2.obj (.text:_isr:Port2_ISR)
+                  00005e58    0000001a     rts430x_lc_rd.lib : boot_special.obj (.text:_isr:_c_int00_noargs_noexit)
+                  00005e72    0000000a     Practica_03 PAE2.obj (.text:_isr:Timer1_ISR)
+                  00005e7c    00000006     rts430x_lc_rd.lib : isr_trap.obj (.text:_isr:__TI_ISR_TRAP)
 
-.const     0    00005f48    00000a40     
-                  00005f48    00000854     hal_lcd.obj (.const:fonts)
-                  0000679c    00000101     rts430x_lc_rd.lib : ctype.obj (.const:.string:_ctypes_)
-                  0000689d    00000001     --HOLE-- [fill = 0]
-                  0000689e    00000089     hal_lcd.obj (.const:.string:fonts_lookup)
-                  00006927    00000001     --HOLE-- [fill = 0]
-                  00006928    0000003a     Practica_03 PAE2.obj (.const:.string)
-                  00006962    00000026     rts430x_lc_rd.lib : _printfi.obj (.const:.string)
+.const     0    00005e82    00000a56     
+                  00005e82    00000854     hal_lcd.obj (.const:fonts)
+                  000066d6    00000101     rts430x_lc_rd.lib : ctype.obj (.const:.string:_ctypes_)
+                  000067d7    00000001     --HOLE-- [fill = 0]
+                  000067d8    00000089     hal_lcd.obj (.const:.string:fonts_lookup)
+                  00006861    00000001     --HOLE-- [fill = 0]
+                  00006862    00000050     Practica_03 PAE2.obj (.const:.string)
+                  000068b2    00000026     rts430x_lc_rd.lib : _printfi.obj (.const:.string)
 
 .pinit     0    00005c00    00000000     UNINITIALIZED
 
@@ -213,94 +213,94 @@ SYSNMI     0    0000fffc    00000002
 .reset     0    0000fffe    00000002     
                   0000fffe    00000002     rts430x_lc_rd.lib : boot.obj (.reset)
 
-.text      0    00010000    00002a96     
+.text      0    00010000    00002b16     
                   00010000    0000039a     rts430x_lc_rd.lib : div64u.obj (.text:__divull)
                   0001039a    00000262                       : _printfi.obj (.text:_setfield)
                   000105fc    00000202                       : _printfi.obj (.text:__TI_printfi)
-                  000107fe    000001ba                       : _printfi.obj (.text:_pproc_fgea)
-                  000109b8    00000188                       : _printfi.obj (.text:_getarg_diouxp)
-                  00010b40    00000184                       : _printfi.obj (.text:acvt)
-                  00010cc4    00000174                       : _printfi.obj (.text:ecvt)
-                  00010e38    00000162                       : _printfi.obj (.text:fcvt)
-                  00010f9a    00000158     Practica_03 PAE2.obj (.text:main)
-                  000110f2    0000014a     rts430x_lc_rd.lib : _printfi.obj (.text:_pconv_e)
-                  0001123c    00000148                       : _printfi.obj (.text:_pproc_diouxp)
-                  00011384    00000130                       : fs_add.obj (.text)
-                  000114b4    00000120                       : _printfi.obj (.text:_pconv_a)
-                  000115d4    0000011c                       : xfdscale.obj (.text:_FDscale)
-                  000116f0    00000106     hal_lcd.obj (.text:halLcdPrint)
-                  000117f6    000000fa     rts430x_lc_rd.lib : _printfi.obj (.text:_pproc_fwp)
-                  000118f0    000000ee                       : _printfi.obj (.text:_pconv_g)
-                  000119de    000000b6                       : fs_mpy.obj (.text)
-                  00011a94    000000a8                       : _printfi.obj (.text:_pproc_str)
-                  00011b3c    0000009e                       : _printfi.obj (.text:_ltostr)
-                  00011bda    00000094                       : _printfi.obj (.text:_ecpy)
-                  00011c6e    00000090                       : _printfi.obj (.text:_mcpy)
-                  00011cfe    0000008e     hal_lcd.obj (.text:halLcdInit)
-                  00011d8c    0000008e     rts430x_lc_rd.lib : fs_div.obj (.text)
-                  00011e1a    0000008c                       : xfdnorm.obj (.text:_FDnorm)
-                  00011ea6    00000088                       : _printfi.obj (.text:_div)
-                  00011f2e    00000080                       : ltoa.obj (.text:ltoa)
-                  00011fae    0000007e                       : fs_tol.obj (.text)
-                  0001202c    0000007a                       : autoinit_wdt.obj (.text:_auto_init_hold_wdt)
-                  000120a6    0000006c     hal_lcd.obj (.text:halLcdDrawCurrentBlock)
-                  00012112    0000006a     rts430x_lc_rd.lib : _printfi.obj (.text:_pconv_f)
-                  0001217c    00000068                       : fs_toi.obj (.text)
-                  000121e4    00000064                       : xfdunsca.obj (.text:_FDunscale)
-                  00012248    00000062                       : atoi.obj (.text:atoi)
-                  000122aa    0000005c                       : ldexp.obj (.text:ldexp)
-                  00012306    00000058     Practica_03 PAE2.obj (.text:init_botons)
-                  0001235e    00000058     rts430x_lc_rd.lib : div32u.obj (.text)
-                  000123b6    0000004e                       : _printfi.obj (.text:_fcpy)
-                  00012404    0000004a                       : fs_cmp.obj (.text)
-                  0001244e    0000004a                       : fs_ltof.obj (.text)
-                  00012498    00000046                       : _printfi.obj (.text:_pproc_fflags)
-                  000124de    00000046     hal_lcd.obj (.text:halLcdSetBackLight)
-                  00012524    00000044     rts430x_lc_rd.lib : sprintf.obj (.text:sprintf)
-                  00012568    00000042     hal_lcd.obj (.text:halLcdSendCommand)
-                  000125aa    00000040     rts430x_lc_rd.lib : div32s.obj (.text)
-                  000125ea    0000003e                       : _printfi.obj (.text:incr_hex)
-                  00012628    0000003a                       : lsl64.obj (.text:__lslll)
-                  00012662    0000003a                       : lsr64.obj (.text:__lsrll)
-                  0001269c    00000038                       : xfdclass.obj (.text:_FDclass)
-                  000126d4    00000038                       : signal.obj (.text:signal)
-                  0001270c    00000036                       : xferaise.obj (.text:_Feraise)
-                  00012742    00000036                       : fs_itof.obj (.text)
-                  00012778    00000034                       : feraiseexcept.obj (.text:feraiseexcept)
-                  000127ac    00000034     hal_lcd.obj (.text:halLcdSetAddress)
-                  000127e0    00000032     rts430x_lc_rd.lib : raise.obj (.text:raise)
-                  00012812    00000030                       : frexp.obj (.text:frexp)
-                  00012842    0000002e     hal_lcd.obj (.text:halLcdBackLightInit)
-                  00012870    00000024     hal_lcd.obj (.text:halLcdClearScreen)
-                  00012894    00000024     hal_lcd.obj (.text:halLcdPrintLine)
-                  000128b8    00000022     hal_lcd.obj (.text:halLcdSetContrast)
-                  000128da    00000020     rts430x_lc_rd.lib : sprintf.obj (.text:_outs)
-                  000128fa    00000020                       : _printfi.obj (.text:val_hex)
-                  0001291a    0000001e     hal_lcd.obj (.text:halLcdActive)
-                  00012938    0000001e     Practica_03 PAE2.obj (.text:init_LCD)
-                  00012956    0000001e     rts430x_lc_rd.lib : memccpy.obj (.text:memccpy)
-                  00012974    0000001c                       : strchr.obj (.text:strchr)
-                  00012990    00000016                       : memset.obj (.text:memset)
-                  000129a6    00000016                       : div16u.obj (.text)
-                  000129bc    00000014                       : sprintf.obj (.text:_outc)
-                  000129d0    00000014     Practica_03 PAE2.obj (.text:config_A1_timer)
-                  000129e4    00000014     rts430x_lc_rd.lib : memcpy.obj (.text:memcpy)
-                  000129f8    00000014                       : mult16.obj (.text)
-                  00012a0c    00000012                       : toupper.obj (.text:toupper)
-                  00012a1e    00000010                       : lsr32.obj (.text:l_lsr)
-                  00012a2e    0000000e     hal_lcd.obj (.text:halLcdDrawBlock)
-                  00012a3c    0000000e     rts430x_lc_rd.lib : strlen.obj (.text:strlen)
-                  00012a4a    0000000a                       : abs.obj (.text:abs)
-                  00012a54    0000000a     Practica_03 PAE2.obj (.text:config_P4_LEDS)
-                  00012a5e    0000000a     rts430x_lc_rd.lib : fs_neg.obj (.text)
-                  00012a68    0000000a                       : lsl16.obj (.text)
-                  00012a72    0000000a                       : lsr16.obj (.text)
-                  00012a7c    00000008     Practica_03 PAE2.obj (.text:escribir)
-                  00012a84    00000004     rts430x_lc_rd.lib : xdscale.obj (.text:_Dscale)
-                  00012a88    00000004                       : xdunscal.obj (.text:_Dunscale)
-                  00012a8c    00000004                       : pre_init.obj (.text:_system_pre_init)
-                  00012a90    00000004                       : exit.obj (.text:abort)
-                  00012a94    00000002                       : _lock.obj (.text:_nop)
+                  000107fe    000001d8     Practica_03 PAE2.obj (.text:main)
+                  000109d6    000001ba     rts430x_lc_rd.lib : _printfi.obj (.text:_pproc_fgea)
+                  00010b90    00000188                       : _printfi.obj (.text:_getarg_diouxp)
+                  00010d18    00000184                       : _printfi.obj (.text:acvt)
+                  00010e9c    00000174                       : _printfi.obj (.text:ecvt)
+                  00011010    00000162                       : _printfi.obj (.text:fcvt)
+                  00011172    0000014a                       : _printfi.obj (.text:_pconv_e)
+                  000112bc    00000148                       : _printfi.obj (.text:_pproc_diouxp)
+                  00011404    00000130                       : fs_add.obj (.text)
+                  00011534    00000120                       : _printfi.obj (.text:_pconv_a)
+                  00011654    0000011c                       : xfdscale.obj (.text:_FDscale)
+                  00011770    00000106     hal_lcd.obj (.text:halLcdPrint)
+                  00011876    000000fa     rts430x_lc_rd.lib : _printfi.obj (.text:_pproc_fwp)
+                  00011970    000000ee                       : _printfi.obj (.text:_pconv_g)
+                  00011a5e    000000b6                       : fs_mpy.obj (.text)
+                  00011b14    000000a8                       : _printfi.obj (.text:_pproc_str)
+                  00011bbc    0000009e                       : _printfi.obj (.text:_ltostr)
+                  00011c5a    00000094                       : _printfi.obj (.text:_ecpy)
+                  00011cee    00000090                       : _printfi.obj (.text:_mcpy)
+                  00011d7e    0000008e     hal_lcd.obj (.text:halLcdInit)
+                  00011e0c    0000008e     rts430x_lc_rd.lib : fs_div.obj (.text)
+                  00011e9a    0000008c                       : xfdnorm.obj (.text:_FDnorm)
+                  00011f26    00000088                       : _printfi.obj (.text:_div)
+                  00011fae    00000080                       : ltoa.obj (.text:ltoa)
+                  0001202e    0000007e                       : fs_tol.obj (.text)
+                  000120ac    0000007a                       : autoinit_wdt.obj (.text:_auto_init_hold_wdt)
+                  00012126    0000006c     hal_lcd.obj (.text:halLcdDrawCurrentBlock)
+                  00012192    0000006a     rts430x_lc_rd.lib : _printfi.obj (.text:_pconv_f)
+                  000121fc    00000068                       : fs_toi.obj (.text)
+                  00012264    00000064                       : xfdunsca.obj (.text:_FDunscale)
+                  000122c8    00000062                       : atoi.obj (.text:atoi)
+                  0001232a    0000005c                       : ldexp.obj (.text:ldexp)
+                  00012386    00000058     Practica_03 PAE2.obj (.text:init_botons)
+                  000123de    00000058     rts430x_lc_rd.lib : div32u.obj (.text)
+                  00012436    0000004e                       : _printfi.obj (.text:_fcpy)
+                  00012484    0000004a                       : fs_cmp.obj (.text)
+                  000124ce    0000004a                       : fs_ltof.obj (.text)
+                  00012518    00000046                       : _printfi.obj (.text:_pproc_fflags)
+                  0001255e    00000046     hal_lcd.obj (.text:halLcdSetBackLight)
+                  000125a4    00000044     rts430x_lc_rd.lib : sprintf.obj (.text:sprintf)
+                  000125e8    00000042     hal_lcd.obj (.text:halLcdSendCommand)
+                  0001262a    00000040     rts430x_lc_rd.lib : div32s.obj (.text)
+                  0001266a    0000003e                       : _printfi.obj (.text:incr_hex)
+                  000126a8    0000003a                       : lsl64.obj (.text:__lslll)
+                  000126e2    0000003a                       : lsr64.obj (.text:__lsrll)
+                  0001271c    00000038                       : xfdclass.obj (.text:_FDclass)
+                  00012754    00000038                       : signal.obj (.text:signal)
+                  0001278c    00000036                       : xferaise.obj (.text:_Feraise)
+                  000127c2    00000036                       : fs_itof.obj (.text)
+                  000127f8    00000034                       : feraiseexcept.obj (.text:feraiseexcept)
+                  0001282c    00000034     hal_lcd.obj (.text:halLcdSetAddress)
+                  00012860    00000032     rts430x_lc_rd.lib : raise.obj (.text:raise)
+                  00012892    00000030                       : frexp.obj (.text:frexp)
+                  000128c2    0000002e     hal_lcd.obj (.text:halLcdBackLightInit)
+                  000128f0    00000024     hal_lcd.obj (.text:halLcdClearScreen)
+                  00012914    00000024     hal_lcd.obj (.text:halLcdPrintLine)
+                  00012938    00000022     hal_lcd.obj (.text:halLcdSetContrast)
+                  0001295a    00000020     rts430x_lc_rd.lib : sprintf.obj (.text:_outs)
+                  0001297a    00000020                       : _printfi.obj (.text:val_hex)
+                  0001299a    0000001e     hal_lcd.obj (.text:halLcdActive)
+                  000129b8    0000001e     Practica_03 PAE2.obj (.text:init_LCD)
+                  000129d6    0000001e     rts430x_lc_rd.lib : memccpy.obj (.text:memccpy)
+                  000129f4    0000001c                       : strchr.obj (.text:strchr)
+                  00012a10    00000016                       : memset.obj (.text:memset)
+                  00012a26    00000016                       : div16u.obj (.text)
+                  00012a3c    00000014                       : sprintf.obj (.text:_outc)
+                  00012a50    00000014     Practica_03 PAE2.obj (.text:config_A1_timer)
+                  00012a64    00000014     rts430x_lc_rd.lib : memcpy.obj (.text:memcpy)
+                  00012a78    00000014                       : mult16.obj (.text)
+                  00012a8c    00000012                       : toupper.obj (.text:toupper)
+                  00012a9e    00000010                       : lsr32.obj (.text:l_lsr)
+                  00012aae    0000000e     hal_lcd.obj (.text:halLcdDrawBlock)
+                  00012abc    0000000e     rts430x_lc_rd.lib : strlen.obj (.text:strlen)
+                  00012aca    0000000a                       : abs.obj (.text:abs)
+                  00012ad4    0000000a     Practica_03 PAE2.obj (.text:config_P4_LEDS)
+                  00012ade    0000000a     rts430x_lc_rd.lib : fs_neg.obj (.text)
+                  00012ae8    0000000a                       : lsl16.obj (.text)
+                  00012af2    0000000a                       : lsr16.obj (.text)
+                  00012afc    00000008     Practica_03 PAE2.obj (.text:escribir)
+                  00012b04    00000004     rts430x_lc_rd.lib : xdscale.obj (.text:_Dscale)
+                  00012b08    00000004                       : xdunscal.obj (.text:_Dunscale)
+                  00012b0c    00000004                       : pre_init.obj (.text:_system_pre_init)
+                  00012b10    00000004                       : exit.obj (.text:abort)
+                  00012b14    00000002                       : _lock.obj (.text:_nop)
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
@@ -392,7 +392,7 @@ ffffffff  .text
 00000732  ADC12MEM9               
 00000733  ADC12MEM9_H             
 00000732  ADC12MEM9_L             
-00012a90  C$$EXIT                 
+00012b10  C$$EXIT                 
 00000150  CRCDI                   
 00000152  CRCDIRB                 
 00000153  CRCDIRB_H               
@@ -464,10 +464,10 @@ ffffffff  .text
 00000146  FCTL4                   
 00000147  FCTL4_H                 
 00000146  FCTL4_L                 
-00012a68  I_LSL                   
-00012a72  I_LSR                   
+00012ae8  I_LSL                   
+00012af2  I_LSR                   
 00001c84  LCD_MEM                 
-00012a1e  L_LSR                   
+00012a9e  L_LSR                   
 00001c7e  LcdAddress              
 00001c00  LcdInitMacro            
 00001c80  LcdTableAddress         
@@ -824,7 +824,7 @@ ffffffff  .text
 000003e0  TB0EX0                  
 000003ee  TB0IV                   
 000003d0  TB0R                    
-00005f38  Timer1_ISR              
+00005e72  Timer1_ISR              
 000005d0  UCA0ABCTL               
 000005c6  UCA0BRW                 
 000005c7  UCA0BRW_H               
@@ -1003,14 +1003,14 @@ ffffffff  .text
 0000015c  WDTCTL                  
 0000015d  WDTCTL_H                
 0000015c  WDTCTL_L                
-00012a84  _Dscale                 
-00012a88  _Dunscale               
+00012b04  _Dscale                 
+00012b08  _Dunscale               
 00002c92  _Errno                  
-0001269c  _FDclass                
+0001271c  _FDclass                
 00002bd0  _FDenorm                
-00011e1a  _FDnorm                 
-000115d4  _FDscale                
-000121e4  _FDunscale              
+00011e9a  _FDnorm                 
+00011654  _FDscale                
+00012264  _FDunscale              
 00002be0  _FEps                   
 00002bf0  _FInf                   
 00002c00  _FNan                   
@@ -1019,11 +1019,11 @@ ffffffff  .text
 00002c30  _FXbig                  
 00002c34  _FZero                  
 00002c82  _Fenv                   
-0001270c  _Feraise                
+0001278c  _Feraise                
 00002c86  _Tls_setup__Fenv        
 00005c00  __STACK_END             
 000000a0  __STACK_SIZE            
-00005f42  __TI_ISR_TRAP           
+00005e7c  __TI_ISR_TRAP           
 0000ffd2  __TI_int41              
 0000ffd4  __TI_int42              
 0000ffd6  __TI_int43              
@@ -1052,98 +1052,98 @@ ffffffff  __binit__
 ffffffff  __c_args__              
 00005c00  __cinit__               
 00001c00  __data__                
-000125aa  __divli                 
-000129a6  __divu                  
-0001235e  __divul                 
+0001262a  __divli                 
+00012a26  __divu                  
+000123de  __divul                 
 00010000  __divull                
 00001c00  __edata__               
 00002c94  __end__                 
 ffffffff  __etext__               
-0001138a  __fs_add                
-00012404  __fs_cmp                
-00011d8c  __fs_div                
-00012742  __fs_itof               
-0001244e  __fs_ltof               
-000119de  __fs_mpy                
-00012a5e  __fs_neg                
-00011384  __fs_sub                
-0001217c  __fs_toi                
-00011fae  __fs_tol                
-00012628  __lslll                 
-00012662  __lsrll                 
-000129f8  __mpyi                  
-000129f8  __mpyi_sw               
+0001140a  __fs_add                
+00012484  __fs_cmp                
+00011e0c  __fs_div                
+000127c2  __fs_itof               
+000124ce  __fs_ltof               
+00011a5e  __fs_mpy                
+00012ade  __fs_neg                
+00011404  __fs_sub                
+000121fc  __fs_toi                
+0001202e  __fs_tol                
+000126a8  __lslll                 
+000126e2  __lsrll                 
+00012a78  __mpyi                  
+00012a78  __mpyi_sw               
 ffffffff  __pinit__               
-000125aa  __remli                 
-000129a6  __remu                  
-0001235e  __remul                 
+0001262a  __remli                 
+00012a26  __remu                  
+000123de  __remul                 
 ffffffff  __text__                
-0001202c  _auto_init_hold_wdt     
-00005f1e  _c_int00_noargs_noexit  
-0000679c  _ctypes_                
+000120ac  _auto_init_hold_wdt     
+00005e58  _c_int00_noargs_noexit  
+000066d6  _ctypes_                
 00002c8a  _lock                   
-00012a94  _nop                    
+00012b14  _nop                    
 0000fffe  _reset_vector           
 00005b60  _stack                  
-00012a8c  _system_pre_init        
+00012b0c  _system_pre_init        
 00002c8e  _unlock                 
-00012a90  abort                   
-00012a4a  abs                     
+00012b10  abort                   
+00012aca  abs                     
 00002c76  alarma                  
-00012248  atoi                    
+000122c8  atoi                    
 00001c83  backlight               
 ffffffff  binit                   
 00002c5c  borrado                 
 00002c4a  cadena                  
 00005c00  cinit                   
-000129d0  config_A1_timer         
-00012a54  config_P4_LEDS          
+00012a50  config_A1_timer         
+00012ad4  config_P4_LEDS          
 00002c71  config_alarma           
 00001c82  contrast                
 00002c6e  contraste               
 00001c00  edata                   
 00002c94  end                     
-00012a7c  escribir                
+00012afc  escribir                
 00002c72  estado                  
 00002c78  estado_anterior         
 ffffffff  etext                   
-00012778  feraiseexcept           
-00005f48  fonts                   
-0000689e  fonts_lookup            
-00012812  frexp                   
-0001291a  halLcdActive            
-00012842  halLcdBackLightInit     
-00012870  halLcdClearScreen       
-00012a2e  halLcdDrawBlock         
-000120a6  halLcdDrawCurrentBlock  
-00011cfe  halLcdInit              
-000116f0  halLcdPrint             
-00012894  halLcdPrintLine         
-00012568  halLcdSendCommand       
-000127ac  halLcdSetAddress        
-000124de  halLcdSetBackLight      
-000128b8  halLcdSetContrast       
+000127f8  feraiseexcept           
+00005e82  fonts                   
+000067d8  fonts_lookup            
+00012892  frexp                   
+0001299a  halLcdActive            
+000128c2  halLcdBackLightInit     
+000128f0  halLcdClearScreen       
+00012aae  halLcdDrawBlock         
+00012126  halLcdDrawCurrentBlock  
+00011d7e  halLcdInit              
+00011770  halLcdPrint             
+00012914  halLcdPrintLine         
+000125e8  halLcdSendCommand       
+0001282c  halLcdSetAddress        
+0001255e  halLcdSetBackLight      
+00012938  halLcdSetContrast       
 00002c7a  i                       
 00002c6f  iluminacion             
-00012938  init_LCD                
-00012306  init_botons             
-000122aa  ldexp                   
+000129b8  init_LCD                
+00012386  init_botons             
+0001232a  ldexp                   
 00002c70  linea                   
-00011f2e  ltoa                    
-00010f9a  main                    
-00012956  memccpy                 
-000129e4  memcpy                  
-00012990  memset                  
+00011fae  ltoa                    
+000107fe  main                    
+000129d6  memccpy                 
+00012a64  memcpy                  
+00012a10  memset                  
 ffffffff  pinit                   
-000127e0  raise                   
+00012860  raise                   
 00002c38  saludo                  
-000126d4  signal                  
-00012524  sprintf                 
-00012974  strchr                  
-00012a3c  strlen                  
+00012754  signal                  
+000125a4  sprintf                 
+000129f4  strchr                  
+00012abc  strlen                  
 00002c7e  temps_delay             
 00002c74  tiempo                  
-00012a0c  toupper                 
+00012a8c  toupper                 
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -1879,12 +1879,12 @@ address   name
 00005c00  __cinit__               
 00005c00  cinit                   
 00005dbc  Port2_ISR               
-00005f1e  _c_int00_noargs_noexit  
-00005f38  Timer1_ISR              
-00005f42  __TI_ISR_TRAP           
-00005f48  fonts                   
-0000679c  _ctypes_                
-0000689e  fonts_lookup            
+00005e58  _c_int00_noargs_noexit  
+00005e72  Timer1_ISR              
+00005e7c  __TI_ISR_TRAP           
+00005e82  fonts                   
+000066d6  _ctypes_                
+000067d8  fonts_lookup            
 0000ffd2  __TI_int41              
 0000ffd4  __TI_int42              
 0000ffd6  __TI_int43              
@@ -1910,74 +1910,74 @@ address   name
 0000fffe  _reset_vector           
 00010000  __divull                
 000105fc  __TI_printfi            
-00010f9a  main                    
-00011384  __fs_sub                
-0001138a  __fs_add                
-000115d4  _FDscale                
-000116f0  halLcdPrint             
-000119de  __fs_mpy                
-00011cfe  halLcdInit              
-00011d8c  __fs_div                
-00011e1a  _FDnorm                 
-00011f2e  ltoa                    
-00011fae  __fs_tol                
-0001202c  _auto_init_hold_wdt     
-000120a6  halLcdDrawCurrentBlock  
-0001217c  __fs_toi                
-000121e4  _FDunscale              
-00012248  atoi                    
-000122aa  ldexp                   
-00012306  init_botons             
-0001235e  __divul                 
-0001235e  __remul                 
-00012404  __fs_cmp                
-0001244e  __fs_ltof               
-000124de  halLcdSetBackLight      
-00012524  sprintf                 
-00012568  halLcdSendCommand       
-000125aa  __divli                 
-000125aa  __remli                 
-00012628  __lslll                 
-00012662  __lsrll                 
-0001269c  _FDclass                
-000126d4  signal                  
-0001270c  _Feraise                
-00012742  __fs_itof               
-00012778  feraiseexcept           
-000127ac  halLcdSetAddress        
-000127e0  raise                   
-00012812  frexp                   
-00012842  halLcdBackLightInit     
-00012870  halLcdClearScreen       
-00012894  halLcdPrintLine         
-000128b8  halLcdSetContrast       
-0001291a  halLcdActive            
-00012938  init_LCD                
-00012956  memccpy                 
-00012974  strchr                  
-00012990  memset                  
-000129a6  __divu                  
-000129a6  __remu                  
-000129d0  config_A1_timer         
-000129e4  memcpy                  
-000129f8  __mpyi                  
-000129f8  __mpyi_sw               
-00012a0c  toupper                 
-00012a1e  L_LSR                   
-00012a2e  halLcdDrawBlock         
-00012a3c  strlen                  
-00012a4a  abs                     
-00012a54  config_P4_LEDS          
-00012a5e  __fs_neg                
-00012a68  I_LSL                   
-00012a72  I_LSR                   
-00012a7c  escribir                
-00012a84  _Dscale                 
-00012a88  _Dunscale               
-00012a8c  _system_pre_init        
-00012a90  C$$EXIT                 
-00012a90  abort                   
-00012a94  _nop                    
+000107fe  main                    
+00011404  __fs_sub                
+0001140a  __fs_add                
+00011654  _FDscale                
+00011770  halLcdPrint             
+00011a5e  __fs_mpy                
+00011d7e  halLcdInit              
+00011e0c  __fs_div                
+00011e9a  _FDnorm                 
+00011fae  ltoa                    
+0001202e  __fs_tol                
+000120ac  _auto_init_hold_wdt     
+00012126  halLcdDrawCurrentBlock  
+000121fc  __fs_toi                
+00012264  _FDunscale              
+000122c8  atoi                    
+0001232a  ldexp                   
+00012386  init_botons             
+000123de  __divul                 
+000123de  __remul                 
+00012484  __fs_cmp                
+000124ce  __fs_ltof               
+0001255e  halLcdSetBackLight      
+000125a4  sprintf                 
+000125e8  halLcdSendCommand       
+0001262a  __divli                 
+0001262a  __remli                 
+000126a8  __lslll                 
+000126e2  __lsrll                 
+0001271c  _FDclass                
+00012754  signal                  
+0001278c  _Feraise                
+000127c2  __fs_itof               
+000127f8  feraiseexcept           
+0001282c  halLcdSetAddress        
+00012860  raise                   
+00012892  frexp                   
+000128c2  halLcdBackLightInit     
+000128f0  halLcdClearScreen       
+00012914  halLcdPrintLine         
+00012938  halLcdSetContrast       
+0001299a  halLcdActive            
+000129b8  init_LCD                
+000129d6  memccpy                 
+000129f4  strchr                  
+00012a10  memset                  
+00012a26  __divu                  
+00012a26  __remu                  
+00012a50  config_A1_timer         
+00012a64  memcpy                  
+00012a78  __mpyi                  
+00012a78  __mpyi_sw               
+00012a8c  toupper                 
+00012a9e  L_LSR                   
+00012aae  halLcdDrawBlock         
+00012abc  strlen                  
+00012aca  abs                     
+00012ad4  config_P4_LEDS          
+00012ade  __fs_neg                
+00012ae8  I_LSL                   
+00012af2  I_LSR                   
+00012afc  escribir                
+00012b04  _Dscale                 
+00012b08  _Dunscale               
+00012b0c  _system_pre_init        
+00012b10  C$$EXIT                 
+00012b10  abort                   
+00012b14  _nop                    
 ffffffff  .text                   
 ffffffff  __binit__               
 ffffffff  __c_args__              
